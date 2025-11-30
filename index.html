@@ -31,7 +31,7 @@
 			<footer id="footer">
 				<ul class="icons">
 					<li><a href="https://www.linkedin.com/in/johnbholliday/" target="_blank" rel="noopener noreferrer" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-					<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+					<li><a href="#" class="icon fa-envelope" id="email-link"><span class="label">Email</span></a></li>
 				</ul>
 				<ul class="copyright">
 					<li>Credits: <a href="http://html5up.net" target="_blank" rel="noopener noreferrer">HTML5 UP</a></li>
@@ -41,7 +41,20 @@
 		<!-- Scripts -->
 			<script src="assets/js/main.js"></script>
 
+			<script>
+  				const u = "john";        // before @
+  				const d = "bholliday";   // domain (no dot)
+  				const t = "com";         // TLD
+  
+  			document.getElementById("email-link").addEventListener("click", function (e) {
+    			e.preventDefault();
+    			const addr = `${u}@${d}.${t}`;
+    			window.location.href = "mailto:" + addr;
+  			});
+			</script>
+		
 	</body>
 
 </html>
+
 
