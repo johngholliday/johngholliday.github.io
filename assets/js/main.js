@@ -22,11 +22,11 @@
 			(function(){if("addEventListener"in window)return;window.addEventListener=function(type,f){window.attachEvent("on"+type,f)}})();
 
 	// Play initial animations on page load.
-		window.addEventListener('load', function() {
-			window.setTimeout(function() {
-				$body.classList.remove('is-preload');
-			}, 100);
-		});
+	//	window.addEventListener('load', function() {
+	//		window.setTimeout(function() {
+	//			$body.classList.remove('is-preload');
+	//		}, 100);
+	//	});
 
 	// Slideshow Background.
 		(function() {
@@ -167,5 +167,6 @@
 				});
 
 		})();
+
 
 })();
