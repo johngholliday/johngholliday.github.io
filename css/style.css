@@ -1,0 +1,157 @@
+/* ============================================
+   Reset / Base
+   ============================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body, h1, p {
+  margin: 0;
+  padding: 0;
+}
+
+/* ============================================
+   Custom Properties
+   ============================================ */
+
+:root {
+  --bg: #fcfcfc;
+  --text: #111;
+  --text-muted: #666;
+  --link: #4a4a4a;
+  --link-border: #d1d1d1;
+  --link-hover-border: #4a4a4a;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1C1C1C;
+    --text: #f3f3f3;
+    --text-muted: #999;
+    --link: #fff;
+    --link-border: #525252;
+    --link-hover-border: #fff;
+  }
+}
+
+/* ============================================
+   Typography
+   ============================================ */
+
+body {
+  font-family: "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--text);
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.bio {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-top: 0.75rem;
+  line-height: 1.6;
+}
+
+/* ============================================
+   Layout
+   ============================================ */
+
+main {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+header {
+  margin-bottom: 1.25rem;
+}
+
+/* ============================================
+   Nav / Icons
+   ============================================ */
+
+nav {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+nav a {
+  color: var(--link);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: opacity 0.15s ease;
+}
+
+nav a:hover {
+  opacity: 0.7;
+}
+
+nav svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* ============================================
+   Links
+   ============================================ */
+
+a {
+  color: var(--link);
+  text-decoration: none;
+  font-size: 0.875rem;
+  border-bottom: 1px solid var(--link-border);
+  transition: border-color 0.15s ease;
+}
+
+a:hover {
+  border-bottom-color: var(--link-hover-border);
+}
+
+nav a {
+  border-bottom: none;
+}
+
+nav a:hover {
+  border-bottom: none;
+}
+
+/* ============================================
+   Selection
+   ============================================ */
+
+::selection {
+  background: #111;
+  color: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  ::selection {
+    background: #fff;
+    color: #111;
+  }
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 1.25rem;
+  }
+}
